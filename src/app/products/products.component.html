@@ -1,8 +1,5 @@
-<div class = "container">
-    <div class = "d-flex flex-row justify-content-around py-3">
-        
-        <div class = "col m-5" *ngFor = "let i of products">
-            <app-products-details></app-products-details>
-        </div>
+<div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+    <div class = "col p-3" *ngFor = "let p of products">
+        <app-products-details></app-products-details>
     </div>
 </div>
