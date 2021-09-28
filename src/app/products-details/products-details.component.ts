@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -8,4 +8,8 @@ import { Product } from '../models/product.model';
 })
 export class ProductsDetailsComponent{
   @Input() productObj: any;
+  @Output() myEvent = new EventEmitter();
+  sendProductTitleToParent(productTitle: string) {
+    this.myEvent.emit(productTitle);
+  }
 }

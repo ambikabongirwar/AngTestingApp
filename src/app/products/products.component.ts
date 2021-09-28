@@ -51,4 +51,8 @@ export class ProductsComponent {
     }
   ];
 
+  productsSentByChild: string[] = [];
+  getProductDetailsFromChild(title: string) {
+    this.productsSentByChild.push(title);
+  }
 }
