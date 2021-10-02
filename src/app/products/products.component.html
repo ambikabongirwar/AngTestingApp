@@ -1,9 +1,11 @@
-<h5 class = "text-center">Number of products selected = {{productsSentByChild.length}}</h5>
+<!--<h5 class = "text-center">Number of products selected = {{productsSentByChild.length}}</h5>-->
 
-<div *ngFor = "let title of productsSentByChild" class = "text-center">{{title}}, </div>
+<!--<div *ngFor = "let title of productsSentByChild" class = "text-center">{{title}}, </div> -->
 
-<div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-    <div class = "col p-3" *ngFor = "let prObj of products">
-        <app-products-details [productObj] = prObj (myEvent) = "getProductDetailsFromChild($event)"></app-products-details>
+<div class = "container">
+    <div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div class = "col p-3" *ngFor = "let prObj of products">
+            <app-products-details [productObj] = prObj (myEvent) = "getProductDetailsFromChild($event)"></app-products-details>
+        </div>
     </div>
 </div>
