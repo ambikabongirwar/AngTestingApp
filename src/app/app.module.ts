@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsDetailsComponent } from './products-details/products-details.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +17,10 @@ import { ProductsDetailsComponent } from './products-details/products-details.co
     ProductsComponent,
     FooterComponent,
     ProductsDetailsComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
