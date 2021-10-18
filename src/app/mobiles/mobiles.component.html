@@ -1,1 +1,49 @@
-<p>mobiles works!</p>
+<div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 pb-5 mb-5">
+    <div class = "col p-3" *ngFor = "let prObj of mobiles">
+        <app-products-details [productObj] = prObj></app-products-details>
+    </div>
+</div>
+<div class = "container m-5 text-center">
+    <h5>Want to add a card? Go ahead add the details here:</h5>
+    <form #ref = "ngForm" (ngSubmit) = "addMobileData()">
+        <div>
+        <label for = "title">Title</label>
+        <input type = "text" name = "title" id = "title" class = "form-control" [(ngModel)] = mobileObj.title>
+        </div> 
+    
+        <div>
+        <label for = "exerpt">Excerpt</label>
+        <input type = "text" name = "text" id = "excerpt" class = "form-control" [(ngModel)] = mobileObj.text>
+        </div>
+    
+        <div>
+        <label for = "url">Image Url</label>
+        <input type = "text" name = "imageUrl" id = "url" class = "form-control" [(ngModel)] = mobileObj.imageUrl>
+        </div>
+    
+        <br />
+        <div class = "text-center"><button type = "submit" class = "btn btn-success">Add mobile</button></div>
+    </form>
+    <!--
+    <form #ref="ngForm" (ngSubmit) = "addMobileData(ref)">
+        <div class = "row">
+            <div class = "col-sm-2 col-md-3"></div>
+            <div class = "col-sm-8 col-md-6">
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" id="floatingInput" name = "title" placeholder="Mobile1" ngModel>
+                    <label for="floatingInput">Title</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" id="floatingInput" name = "text" placeholder="abcdef...." ngModel>
+                    <label for="floatingInput">Excerpt</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" id="floatingInput" name = "imageUrl" placeholder="http://image.com" ngModel>
+                    <label for="floatingInput">Image Url</label>
+                </div>
+                <button class = "btn btn-success d-block mx-auto m-4" type = "submit">Add mobile</button>
+            </div>
+            <div class = "col-sm-2 col-md-3"></div>
+        </div>
+    </form> -->
+</div>
