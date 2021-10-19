@@ -10,16 +10,25 @@ import { Product } from '../models/product.model';
 export class MobilesComponent implements OnInit {
 
   mobiles: Product[] = [];
+  
   constructor(private dsObj: DataService) { }
 
-  ngOnInit(): void {
-    this.mobiles = this.dsObj.getMobilesData();
+  ngOnInit() {
+    this.dsObj.getMobilesData().subscribe(
+      data => {
+        this.mobiles = data;
+      },
+      err => {
+        console.log("err is ", err);
+      }
+    )
   }
 
+  /*
   mobileObj: Product = {title: "", text: "", imageUrl: ""};
   addMobileData() {
-    console.log(this.mobileObj);
     this.dsObj.updateMobilesData(this.mobileObj);
-  }
+    this.mobileObj = {title: "", text: "", imageUrl: ""};
+  }*/
 
 }
