@@ -9,6 +9,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import { TelephonesComponent } from './telephones/telephones.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contactUs', component: ContactUsComponent},
+  {path: 'test', component: TestComponent},
   {path: '**', component: PagenotfoundComponent}
 ];
 
