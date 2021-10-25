@@ -18,6 +18,7 @@ import { MobilesComponent } from './mobiles/mobiles.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { TelephonesComponent } from './telephones/telephones.component';
 import { TestComponent } from './test/test.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TestComponent } from './test/test.component';
     BikesComponent,
     TelephonesComponent,
     TestComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,

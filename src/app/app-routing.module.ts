@@ -10,6 +10,7 @@ import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import { TelephonesComponent } from './telephones/telephones.component';
 import { TestComponent } from './test/test.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contactUs', component: ContactUsComponent},
-  {path: 'test', component: TestComponent},
+  {path: 'test', component: TestComponent}, 
+  {path: 'test/:id', component: UserDetailsComponent},
   {path: '**', component: PagenotfoundComponent}
 ];
 

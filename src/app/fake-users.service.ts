@@ -14,5 +14,9 @@ export class FakeUsersService {
     return this.hc.get<Post[]>("https://jsonplaceholder.typicode.com/posts");
   }
 
+  getPostData(id: any): Observable<Post> {
+    return this.hc.get<Post>("https://jsonplaceholder.typicode.com/posts/"+id)
+  }
+
 }
  

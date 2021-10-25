@@ -1,24 +1,12 @@
 <html>
-    <head>
-        <style>
-            table, th, td {
-              border: 1px solid black;
-            }
-        </style>
-    </head>
+    
     <body>
         <table style = "width: 100%; text-align:center" class = "m-5">
             <tr>
-                <th>UserId</th>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Body</th>
             </tr>
             <tr class = "m-1" *ngFor = "let postObj of posts">
-                <td>{{postObj.userId}}</td>
-                <td>{{postObj.id}}</td>
-                <td>{{postObj.title}}</td>
-                <td>{{postObj.body}}</td>
+                <td><button class = "btn btn-primary m-1" (click)="onSelectId(postObj.id)">{{postObj.id}}</button></td>
             </tr>
         </table>
     </body>
