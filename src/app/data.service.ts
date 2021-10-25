@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private hc: HttpClient) { }
     getMobilesData(): Observable<Product[]> {
-      return this.hc.get<Product[]>("assets/mobiles.json");
+      return this.hc.get<Product[]>("http://localhost:3000/mobiles");
     }
     /*updateMobilesData(mobileDetails: Product) {
       this.mobiles.push(mobileDetails);
